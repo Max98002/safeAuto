@@ -1,0 +1,32 @@
+.services {
+  padding-top: 130px;
+  padding-bottom: 140px;
+  background-color: #F3F7FF;
+  &__item {
+    max-width: 272px;
+    margin-bottom: 70px;
+    min-height: 100px;
+  }
+  &-item {
+    &__title {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-bottom: 16px;
+      color: $black-color;
+      span {
+        margin-left: 10px;
+        padding: 1px 5px;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: bold;
+        background: $red-color;
+        color: #fff;
+      }
+    }
+    &__subtitle {
+      margin: 0;
+      color: rgba($color: #263B64, $alpha: 0.8);
+    }
+  }
+}

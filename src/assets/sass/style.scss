@@ -1,0 +1,61 @@
+@import './bootstrap/bootstrap-grid.min';
+@import './bootstrap/bootstrap-reboot.min';
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;900&display=swap');
+
+@import './base/variables';
+@import './base/mixins';
+@import './base/font-size';
+@import './base/intarface';
+
+body {
+  position: relative;
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: $black-color;
+}
+
+a {
+  position: relative;
+  text-decoration: none;
+  &:hover {
+    color: #fff;
+  }
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+  height: 100%;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+//elements
+@import './elements/burger';
+
+// main style
+
+@import './header/header';
+@import './blocks/promo/promo';
+@import './blocks/preview/preview';
+@import './blocks/steps/steps';
+@import './blocks/services/services';
+@import './blocks/reviews/reviews';
+
+
+// media
+@import './header/media-header';
+@import './blocks/promo/media-promo';
+@import './blocks/preview/media-preview';
+@import './blocks/steps/media-steps';
+@import './blocks/services/media-services';
+@import './blocks/reviews/media-reviews';

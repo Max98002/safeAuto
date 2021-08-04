@@ -1,0 +1,67 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  z-index: 20;
+
+  &_transparent {
+    background-color: transparent;
+  }
+
+  &-wrapper {
+    @include dFlex;
+  }
+
+  &-logo {
+    width: 120px;
+    min-width: 65px;
+    height: 50px;
+  }
+
+  &-catalog {
+    display: none;
+
+    &__link {
+      padding: 25px 0;
+      color: #fff;
+
+      &:hover {
+        @include hoverLine;
+
+        &::before {
+          bottom: 20px;
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+
+  &-nav {
+    &__list {
+      @include dFlex;
+    }
+
+    &__item:not(:last-child) {
+      margin-right: 48px;
+    }
+
+    &__link {
+      padding: 25px 0;
+      color: #fff;
+
+      &:hover {
+        @include hoverLine;
+
+        &::before {
+          bottom: 20px;
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+}

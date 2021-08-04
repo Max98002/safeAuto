@@ -1,0 +1,138 @@
+.promo {
+  background-image: url('../img/header/main-bg.png');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  padding-top: 240px;
+  padding-bottom: 400px;
+
+  &-ovner {
+    margin-bottom: 16px;
+
+    &__photo {
+      position: relative;
+      min-width: 40px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: -10px;
+        width: 23px;
+        min-width: 23px;
+        height: 28px;
+        background: url('../icons/hend.png') no-repeat;
+      }
+    }
+
+    &__name {
+      color: #fff;
+    }
+
+    &__online {
+      color: rgba($color: #fff, $alpha: 0.8);
+    }
+
+    &__photo {
+      margin-right: 16px;
+    }
+  }
+
+  &__title {
+    color: #fff;
+    font-weight: 900;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 50px;
+    span.europa {
+      position: relative;
+      &::before, &::after {
+        content: '';
+        position: absolute;
+        height: 5px;
+        background-color: rgba($color: #ffffff, $alpha: 0.5);
+      }
+      &::before {
+        width: 37%;
+        left: 0;
+        bottom: 5px;
+      }
+      &::after {
+        width: 53%;
+        right: 0;
+        bottom: 5px;
+      }
+    }
+    span.ua {
+      position: relative;
+      &::before, &::after {
+        content: '';
+        position: absolute;
+        height: 5px;
+        background-color: rgba($color: #ffffff, $alpha: 0.5);
+      }
+      &::before {
+        width: 34%;
+        left: 0;
+        bottom: 5px;
+      }
+      &::after {
+        width: 57%;
+        right: 0;
+        bottom: 5px;
+      }
+    }
+  }
+
+  &-contact {
+    &__social {
+      margin: 0 24px;
+      padding: 0 20px;
+      border: 1px solid rgba($color: #ffffff, $alpha: 0.2);
+      border-top: none;
+      border-bottom: none;
+    }
+
+    &__phone {
+      svg {
+        min-width: 17px;
+      }
+    }
+
+    &__phones {
+      position: relative;
+      color: #fff;
+      padding-left: 4px;
+      font-family: sans-serif;
+
+      &:hover {
+        @include hoverLine;
+
+        &::before {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+
+    &__link {
+      position: relative;
+      width: 32px;
+      min-width: 32px;
+      height: 32px;
+
+      &:hover {
+        svg {
+          rect {
+            fill: $accent-color;
+          }
+        }
+      }
+    }
+
+    &__link:not(:last-child) {
+      margin-right: 16px;
+    }
+  }
+
+}

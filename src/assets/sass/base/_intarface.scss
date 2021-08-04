@@ -1,0 +1,37 @@
+.button {
+  padding: 12px 32px;
+  border: none;
+  background-color: transparent;
+}
+
+.button.button_primery {
+  background-color: $accent-color;
+  color: #fff;
+
+  &:hover {
+    @include hoverBtn;
+  }
+}
+
+.button.button_secondary {
+  background-color: transparent;
+  border: 1px solid $light-gray-color;
+  color: #000;
+
+  &:hover {
+    @include hoverBtnBorder;
+    cursor: pointer;
+
+    svg {
+      path {
+        fill: $light-blue-color;
+      }
+    }
+  }
+}
+
+.section {
+  &-title {
+    font-weight: bold;
+  }
+}

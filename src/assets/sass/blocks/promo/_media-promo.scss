@@ -1,0 +1,54 @@
+@media (max-width: 991.98px) {
+  .promo {
+    &__title {
+      font-size: 50px;
+      line-height: 110%;
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .promo {
+    padding-bottom: 300px;
+
+    &__title {
+      font-size: 35px;
+      margin-bottom: 25px;
+    }
+
+    &-contact {
+      &__social {
+        margin: 0;
+        border: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 490.98px) {
+  .promo {
+    &__title {
+      font-size: 30px;
+      margin-bottom: 25px;
+    }
+
+    &-contact {
+      &__social {
+        margin: 20px 0;
+      }
+    }
+
+    &_column {
+      flex-direction: column;
+    }
+  }
+}
+
+@media (max-width: 380.98px) {
+  .promo {
+    &__title {
+      font-size: 25px;
+      margin-bottom: 25px;
+    }
+  }
+}
