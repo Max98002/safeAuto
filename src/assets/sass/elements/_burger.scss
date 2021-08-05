@@ -16,6 +16,11 @@
     height: 1px;
     background-color: #fff;
   }
+  &__black {
+    span {
+      background-color: #000;
+    }
+  }
 }
 
 @media (max-width: 575.98px) {
