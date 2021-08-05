@@ -2,15 +2,14 @@
   padding-bottom: 160px;
 
   &-block {
-    height: 50px;
-    margin-bottom: 20px;
+    height: 80px;
     border-bottom: 1px solid #B6C4E0;
     overflow: hidden;
     transition: height .5s;
+
     &:hover {
       border-color: $accent-color;
       cursor: pointer;
-      height: 134px;
       overflow: auto;
       .question-header__title {
         color: $accent-color;
@@ -22,7 +21,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 12px;
+    padding: 24px 0;
 
     &__btn {
       padding: 0;
@@ -36,7 +35,8 @@
   }
 
   &-footer {
-    padding-bottom: 30px;
+    padding-top: 12px;
+    padding-bottom: 38px;
 
     &__text {
       margin: 0;
