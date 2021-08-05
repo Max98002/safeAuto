@@ -27,8 +27,10 @@
       padding: 0;
       padding: 10px;
       transition: all .3s ease-in-out;
+
       &_active {
         transform: rotate(45deg) scale(1.7);
+
         svg {
           path {
             fill: $accent-color;
@@ -47,6 +49,7 @@
     display: none;
     padding-top: 12px;
     padding-bottom: 38px;
+
     &_active {
       display: block;
     }
