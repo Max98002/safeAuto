@@ -1,25 +1,8 @@
-@media (max-width: 991.98px) {
-  .steps {
-    &__title {
-      font-size: 30px;
-      line-height: 1.4;
-    }
-  }
-}
-
 @media (max-width: 767.98px) {
   .steps {
     &-slid {
       max-width: 100%;
       min-width: 100%;
-    }
-  }
-}
-
-@media (max-width: 380.98px) {
-  .steps {
-    &__title {
-      font-size: 25px;
     }
   }
 }
