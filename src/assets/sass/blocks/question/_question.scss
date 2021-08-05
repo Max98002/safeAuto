@@ -2,7 +2,6 @@
   padding-bottom: 160px;
 
   &-block {
-    height: 80px;
     border-bottom: 1px solid #B6C4E0;
     overflow: hidden;
     transition: height .5s;
@@ -11,6 +10,7 @@
       border-color: $accent-color;
       cursor: pointer;
       overflow: auto;
+
       .question-header__title {
         color: $accent-color;
       }
@@ -26,6 +26,15 @@
     &__btn {
       padding: 0;
       padding: 10px;
+      transition: all .3s ease-in-out;
+      &_active {
+        transform: rotate(45deg);
+        svg {
+          path {
+            fill: $accent-color;
+          }
+        }
+      }
 
       svg {
         width: 17px;
@@ -35,8 +44,12 @@
   }
 
   &-footer {
+    display: none;
     padding-top: 12px;
     padding-bottom: 38px;
+    &_active {
+      display: block;
+    }
 
     &__text {
       margin: 0;
