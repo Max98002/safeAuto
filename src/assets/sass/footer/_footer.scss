@@ -2,11 +2,21 @@
   padding-top: 79px;
   padding-bottom: 126px;
   background-color: $black-color;
+
   &-links {
     border: none;
   }
+
   &__title {
     font-weight: bold;
     color: #fff;
+  }
+
+  &-bottom {
+    background-color: #081632;
+    &__safeAuto {
+      padding: 16px 0;
+      color: rgba($color: #7C91BD, $alpha: 0.8);
+    }
   }
 }
