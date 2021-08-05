@@ -15,7 +15,8 @@ body {
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
-  color: $black-color;
+  color: #526283;
+
 }
 
 a {
@@ -48,6 +49,7 @@ ul {
 @import './header/header';
 @import './blocks/promo/promo';
 @import './blocks/preview/preview';
+@import './blocks/preview/settings-preview';
 @import './blocks/steps/steps';
 @import './blocks/services/services';
 @import './blocks/reviews/reviews';

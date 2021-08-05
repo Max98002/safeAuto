@@ -1,0 +1,16 @@
+.settings {
+  padding-top: 150px;
+  margin-bottom: 160px;
+  &__title {
+    color: $black-color;
+  }
+  &__subtitle {
+    color: $medium-gray-color;
+  }
+  &__link {
+    color: $black-color;
+    &:hover {
+      color: $accent-color;
+    }
+  }
+}
