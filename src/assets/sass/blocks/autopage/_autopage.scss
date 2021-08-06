@@ -1,6 +1,12 @@
 .autopage {
   padding-top: 120px;
   padding-bottom: 200px;
+  &__title {
+    color: $black-color;
+  }
+  &__subtitle {
+    color: #8B9FC8;
+  }
 
   &__catalog {
     margin-bottom: 24px;
@@ -10,6 +16,16 @@
 
       path {
         fill: $light-blue-color;
+      }
+    }
+    &_right {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      margin-bottom: 0;
+      svg {
+        margin-left: 4px;
+        transform: rotate(0);
       }
     }
   }
@@ -117,6 +133,7 @@
   &-info {
     &_mt {
       margin-top: 80px;
+      margin-bottom: 114px;
     }
   }
 }
