@@ -10067,29 +10067,36 @@ const tabs = (selectorHeader, selectorTabs, selectorContents, activeClass) => {
         contents = document.querySelectorAll(selectorContents);
 
   const hideTabs = () => {
-    contents.forEach(content => content.style.display = 'none');
-    tabs.forEach(tab => tab.classList.remove(activeClass));
+    try {
+      contents.forEach(content => content.style.display = 'none');
+      tabs.forEach(tab => tab.classList.remove(activeClass));
+    } catch (error) {}
   };
 
   const showTabs = (i = 0) => {
-    contents[i].style.display = '';
-    tabs[i].classList.add(activeClass);
+    try {
+      contents[i].style.display = '';
+      tabs[i].classList.add(activeClass);
+    } catch (error) {}
   };
 
   hideTabs();
   showTabs();
-  header.addEventListener('click', e => {
-    let target = e.target;
 
-    if (target && target.classList.contains(selectorTabs.substring(1))) {
-      tabs.forEach((tab, i) => {
-        if (target == tab) {
-          hideTabs();
-          showTabs(i);
-        }
-      });
-    }
-  });
+  try {
+    header.addEventListener('click', e => {
+      let target = e.target;
+
+      if (target && target.classList.contains(selectorTabs.substring(1))) {
+        tabs.forEach((tab, i) => {
+          if (target == tab) {
+            hideTabs();
+            showTabs(i);
+          }
+        });
+      }
+    });
+  } catch (e) {}
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (tabs);
