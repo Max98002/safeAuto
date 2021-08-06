@@ -45,7 +45,6 @@ ul {
 @import './elements/burger';
 
 // main style
-
 @import './header/header';
 @import './blocks/promo/promo';
 @import './blocks/preview/preview';
@@ -54,6 +53,11 @@ ul {
 @import './blocks/reviews/reviews';
 @import './blocks/question/question';
 @import './footer/footer';
+
+
+
+//autoPage
+@import './blocks//autopage/autopage';
 
 
 // media
@@ -67,3 +71,5 @@ ul {
 @import './footer/media-footer';
 
 @import './blocks/preview/settings-preview';
+
+@import './blocks/autopage/media-autopage';
