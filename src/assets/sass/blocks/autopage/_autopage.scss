@@ -26,7 +26,6 @@
 
   &-slider {
     position: relative;
-    max-width: 550px;
     height: 360px;
     margin-bottom: 4px;
 
@@ -81,19 +80,22 @@
 
   &-nav {
     overflow: hidden;
-    max-width: 550px;
+
     &__wrapper {
       display: flex;
       align-items: stretch;
       flex-wrap: nowrap;
     }
+
     &__slid:not(:last-child) {
       margin-right: 4px;
     }
+
     &__slid {
       position: relative;
       min-width: 120px;
       max-height: 64px;
+
       &::before {
         position: absolute;
         top: 0;
@@ -103,11 +105,96 @@
         height: 100%;
         background: linear-gradient(0deg, rgba(3, 18, 48, 0.4), rgba(3, 18, 48, 0.4));
       }
+
       &_active {
         &::before {
           background: none;
         }
       }
+    }
+  }
+
+  &-info {
+    &_mt {
+      margin-top: 80px;
+    }
+  }
+}
+
+.auto {
+  &__name {
+    font-weight: bold;
+    color: $black-color;
+  }
+
+  &-block {
+    &__status {
+      display: none;
+      color: $red-color;
+
+      &_sell {
+        display: inline-flex;
+      }
+    }
+
+    &__price {
+      font-family: sans-serif;
+
+      &_active {
+        color: $accent-color;
+      }
+    }
+
+  }
+
+  &__share {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    border: none;
+    background-color: transparent;
+
+    svg {
+      margin-left: 5px;
+    }
+  }
+
+  &-desc {
+    margin-bottom: 16px;
+    padding-top: 24px;
+    padding-bottom: 35px;
+    border: 1px solid #DAE0EE;
+    border-right: none;
+    border-left: none;
+  }
+
+  &-item {
+    &__subtitle {
+      color: $black-color;
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  &-contact {
+    svg {
+      path {
+        fill: $light-blue-color;
+      }
+    }
+
+    &__phone {
+      color: $light-blue-color;
+
+      &:hover {
+        color: $accent-color
+      }
+    }
+
+    &__btn:not(:last-child) {
+      margin-right: 13px;
     }
   }
 }

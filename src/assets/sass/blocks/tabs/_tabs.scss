@@ -1,0 +1,61 @@
+.tabs {
+  &__header {
+    margin-bottom: 40px;
+  }
+
+  &-header {
+    &__btn {
+      &:hover {
+        background-color: #F3F7FF;
+        border-color: #014AD8;
+      }
+    }
+
+
+  }
+
+  &-content {
+    &__item {
+      table {
+        width: 100%;
+      }
+    }
+
+    &__title {
+      margin-bottom: 16px;
+      color: $black-color;
+    }
+
+    &__text {
+      color: rgba($color: #263B64, $alpha: 0.8);
+    }
+  }
+}
+
+.table {
+  &-row:not(:last-child) {
+    border-bottom: 1px solid #DAE0EE;
+  }
+
+  &-col {
+    position: relative;
+    padding: 15px 0;
+    padding-left: 30px;
+    padding-right: 10px;
+
+    &::before {
+      content: url('../icons/chack.svg');
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 16px;
+      height: 16px;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.tabs-header__btn.tabs-header__btn_active {
+  background-color: #F3F7FF;
+  border-color: #014AD8;
+}

@@ -1,0 +1,23 @@
+@media (max-width: 575.98px) {
+  .tabs {
+    &-header {
+      &__btn {
+        padding: 10px 15px;
+      }
+    }
+  }
+
+  .table {
+    &-row {
+      display: flex;
+      flex-direction: column;
+      border: none;
+    }
+    &-col {
+      font-size: 14px;
+    }
+    &-col:nth-child(odd) {
+      border-bottom: 1px solid #DAE0EE;
+    }
+  }
+}

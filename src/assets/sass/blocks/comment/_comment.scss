@@ -1,0 +1,19 @@
+.comment {
+  display: none;
+  &_active {
+    display: block;
+  }
+  &__title {
+    margin-bottom: 35px;
+    color: $black-color;
+  }
+
+  &__user {
+    margin-bottom: 24px;
+  }
+
+  &__text {
+    margin-bottom: 40px;
+    height: auto;
+  }
+}

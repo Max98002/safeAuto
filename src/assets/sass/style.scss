@@ -53,12 +53,14 @@ ul {
 @import './blocks/reviews/reviews';
 @import './blocks/question/question';
 @import './footer/footer';
+@import './blocks/comment/comment';
 
 
 
 //autoPage
-@import './blocks//autopage/autopage';
+@import './blocks/autopage/autopage';
 
+@import './blocks/tabs/tabs';
 
 // media
 @import './header/media-header';
@@ -73,3 +75,9 @@ ul {
 @import './blocks/preview/settings-preview';
 
 @import './blocks/autopage/media-autopage';
+
+@import './blocks/tabs/media-tabs';
+
+
+
+// Щоб не забути _active (comment_active ...) додавав до всіх елементів які повинні були зявитись або щоб не заважали
