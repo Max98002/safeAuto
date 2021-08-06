@@ -14,3 +14,18 @@
     }
   }
 }
+
+@media (max-width: 858.98px) {
+  .settings{
+    padding-top: 300px;
+    &__title, &__subtitle {
+      font-size: 43px;
+      line-height: 120%;
+    }
+  }
+}
+@media (max-width: 520.98px) {
+  .settings{
+    padding-top: 120px;
+  }
+}

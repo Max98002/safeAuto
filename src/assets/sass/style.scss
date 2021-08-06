@@ -49,7 +49,6 @@ ul {
 @import './header/header';
 @import './blocks/promo/promo';
 @import './blocks/preview/preview';
-@import './blocks/preview/settings-preview';
 @import './blocks/steps/steps';
 @import './blocks/services/services';
 @import './blocks/reviews/reviews';
@@ -66,3 +65,5 @@ ul {
 @import './blocks/reviews/media-reviews';
 @import './blocks/question/media-question';
 @import './footer/media-footer';
+
+@import './blocks/preview/settings-preview';

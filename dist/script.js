@@ -9935,17 +9935,51 @@ module.exports = g;
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.esm.js");
-/* harmony import */ var _modules_openMenu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/openMenu */ "./src/js/modules/openMenu.js");
-/* harmony import */ var _modules_openQuestion__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/openQuestion */ "./src/js/modules/openQuestion.js");
+/* harmony import */ var _modules_fixHeader__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/fixHeader */ "./src/js/modules/fixHeader.js");
+/* harmony import */ var _modules_openMenu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/openMenu */ "./src/js/modules/openMenu.js");
+/* harmony import */ var _modules_openQuestion__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/openQuestion */ "./src/js/modules/openQuestion.js");
+
 
 
 
 window.addEventListener('DOMContentLoaded', () => {
   'use strict';
 
-  Object(_modules_openMenu__WEBPACK_IMPORTED_MODULE_1__["default"])('.header', '.burger', '.header-nav__list');
-  Object(_modules_openQuestion__WEBPACK_IMPORTED_MODULE_2__["default"])('.question-header');
+  Object(_modules_openMenu__WEBPACK_IMPORTED_MODULE_2__["default"])('.header', '.burger', '.header-nav__list');
+  Object(_modules_openQuestion__WEBPACK_IMPORTED_MODULE_3__["default"])('.question-header');
+  Object(_modules_fixHeader__WEBPACK_IMPORTED_MODULE_1__["default"])('header');
 });
+
+/***/ }),
+
+/***/ "./src/js/modules/fixHeader.js":
+/*!*************************************!*\
+  !*** ./src/js/modules/fixHeader.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+const fixHeader = selectorHeader => {
+  const header = document.querySelector(selectorHeader);
+
+  const changeHeaderScroll = element => {
+    if (document.documentElement.scrollTop > 50 && element.classList.contains('header__settings')) {
+      element.style.cssText = `position: fixed; background: #fff;`;
+    } else if (document.documentElement.scrollTop > 50 && !element.classList.contains('header__settings')) {
+      element.style.cssText = `position: fixed; background: #031230;`;
+    } else {
+      header.style.cssText = `position: absolute; background-color: auto;`;
+    }
+  };
+
+  window.addEventListener('scroll', function () {
+    changeHeaderScroll(header);
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (fixHeader);
 
 /***/ }),
 
