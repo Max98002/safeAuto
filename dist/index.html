@@ -835,6 +835,54 @@
         </div>
     </div>
 
+    <article class="modal" id="modaorder">
+        <div class="modal__wrap">
+            <div class="modal__window">
+                <button class="button modal__close">
+                    <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M15.5 2.26757L13.7324 0.5L7.99998 6.23241L2.26757 0.5L0.5 2.26757L6.23241 7.99998L0.5 13.7324L2.26757 15.5L7.99998 9.76759L13.7324 15.5L15.5 13.7324L9.76759 7.99998L15.5 2.26757Z"
+                            fill="#031230" />
+                    </svg>
+                </button>
+                <div class="modal-elements modal__elements">
+                    <h3 class="modal__title fz_23px">Заявка на авто</h3>
+                    <form class="order">
+                        <div class="input-group input__group">
+                            <input class="order-elements__phone order-elements__input" type="text" name="phone"
+                                placeholder="Ваш номер телефону">
+                        </div>
+                        <div class="textarea-group textarea__group">
+                            <textarea class="order-elements__comment order-elements__input" name="comment"
+                                placeholder="Коментар (Не обов’язково)"></textarea>
+                        </div>
+                        <button class="button button_primery order-elements__btn">Замовити авто</button>
+                        <span class="order-elements__promise">Ми звяжемось з вами протягом 10хв</span>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <article class="modal" id="modathanks">
+        <div class="modal__wrap">
+            <div class="modal__window">
+                <div class="order-thanks">
+                    <div class="order-thanks__block">
+                        <svg width="56" height="40" viewBox="0 0 56 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0 21.7016L19.1769 40L56 4.96518L50.7134 0L19.1769 29.9998L5.21335 16.7014L0 21.7016Z"
+                                fill="#014AD8" />
+                        </svg>
+
+                    </div>
+                    <h3 class="modal__title order-thanks__title fz_23px">Заявку надіслано</h3>
+                    <span class="order-elements__promise order-thanks__promise">Ми звяжемось з вами протягом 10хв</span>
+                    <button class="button button_primery order-elements__btn">ok</button>
+                </div>
+            </div>
+        </div>
+    </article>
 
     <script src="script.js"></script>
 </body>

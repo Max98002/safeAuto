@@ -4,6 +4,7 @@ import openMenu from './modules/openMenu';
 import openQuestion from './modules/openQuestion';
 import tabs from './modules/tabs';
 
+
 window.addEventListener('DOMContentLoaded', () => {
   'use strict';
 
@@ -12,5 +13,7 @@ window.addEventListener('DOMContentLoaded', () => {
   fixHeader('header');
 
   tabs('.tabs__header', '.tabs-header__btn', '.tabs-content__item', 'tabs-header__btn_active');
+
+
 
 });

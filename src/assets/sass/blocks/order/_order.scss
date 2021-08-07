@@ -1,0 +1,63 @@
+.order {
+  display: flex;
+  flex-flow: column nowrap;
+  margin-top: 30px;
+
+  &-elements {
+    width: 360px;
+    max-width: 100%;
+    &__input {
+      background: #FFFFFF;
+      border: 1px solid #DDE5F4;
+    }
+    &__phone {
+      padding-top: 16px;
+      padding-right: 20px;
+      padding-bottom: 16px;
+      padding-left: 16px;
+      margin-bottom: 13px;
+    }
+    &__comment {
+      height: 96px;
+      padding-top: 16px;
+      padding-left: 16px;
+      padding-right: 20px;
+      padding-bottom: 16px;
+      resize: none;
+      margin-bottom: 48px;
+    }
+    &__btn {
+      margin-bottom: 16px;
+    }
+    &__promise {
+      margin: 0 auto;
+      color: rgba($color: #263B64, $alpha: 0.7);
+    }
+  }
+  &-thanks {
+    max-width: 359px;
+    width: 100%;
+    padding-top: 150px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    &__block {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 136px;
+      background: #F3F7FF;
+    }
+    &__title {
+      text-align: center;
+    }
+    &__promise {
+      margin-bottom: 72px;
+      text-align: center;
+    }
+  }
+}

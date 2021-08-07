@@ -1,6 +1,7 @@
 @import './bootstrap/bootstrap-grid.min';
 @import './bootstrap/bootstrap-reboot.min';
 
+
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;900&display=swap');
 
 @import './base/variables';
@@ -41,6 +42,11 @@ ul {
   margin: 0;
 }
 
+input,
+textarea {
+  width: 100%;
+}
+
 //elements
 @import './elements/burger';
 
@@ -62,6 +68,10 @@ ul {
 
 @import './blocks/tabs/tabs';
 
+// modals
+@import './elements/modal';
+
+
 // media
 @import './header/media-header';
 @import './blocks/promo/media-promo';
@@ -78,6 +88,8 @@ ul {
 
 @import './blocks/tabs/media-tabs';
 
+@import './blocks/order/order';
+@import './blocks/order/media-order';
 
 
 // Щоб не забути _active (comment_active ...) додавав до всіх елементів які повинні були зявитись або щоб не заважали
