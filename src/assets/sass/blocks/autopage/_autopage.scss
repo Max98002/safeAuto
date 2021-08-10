@@ -139,9 +139,13 @@
 }
 
 .auto {
+  &-desc {
+    font-variant-numeric: lining-nums;
+  }
   &__name {
     font-weight: bold;
     color: $black-color;
+    font-variant-numeric: lining-nums;
   }
 
   &-block {

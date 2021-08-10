@@ -95,6 +95,7 @@
     }
 
     &__phone {
+      font-variant-numeric: lining-nums;
       svg {
         min-width: 17px;
       }

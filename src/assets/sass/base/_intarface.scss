@@ -2,6 +2,17 @@
   padding: 12px 32px;
   border: none;
   background-color: transparent;
+  &_position {
+    position: fixed;
+    display: none;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: $accent-color;
+    z-index: 99999;
+    padding: 20px 32px;
+  }
 }
 
 .button.button_primery {
