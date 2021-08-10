@@ -20,6 +20,7 @@
     align-items: flex-start;
     min-height: 450px;
     height: 457px;
+    font-variant-numeric: lining-nums;
 
     &__photo {
       min-width: 457px;
@@ -71,7 +72,7 @@
     }
 
     &__buycar {
-      font-family: sans-serif;
+      font-variant-numeric: lining-nums;
       color: rgba($color: #031230, $alpha: 0.8);
     }
   }

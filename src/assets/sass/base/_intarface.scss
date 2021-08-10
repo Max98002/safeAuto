@@ -32,6 +32,8 @@
 
 .section {
   &-title {
-    font-weight: bold;
+    font-variant-numeric: lining-nums;
+    font-weight: 900;
+    color: #031230;
   }
 }

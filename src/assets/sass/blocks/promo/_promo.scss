@@ -5,6 +5,7 @@
   background-size: cover;
   padding-top: 240px;
   padding-bottom: 400px;
+  font-variant-numeric: lining-nums;
 
   &-ovner {
     margin-bottom: 16px;
@@ -103,7 +104,6 @@
       position: relative;
       color: #fff;
       padding-left: 4px;
-      font-family: sans-serif;
 
       &:hover {
         @include hoverLine;

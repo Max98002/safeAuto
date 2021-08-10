@@ -1,4 +1,5 @@
 .preview {
+  font-variant-numeric: lining-nums;
   &_margin {
     margin-top: -200px;
     margin-bottom: 160px;
@@ -16,7 +17,7 @@
 
   &__count {
     font-weight: 900;
-    font-family: sans-serif;
+    font-variant-numeric: lining-nums;
     color: rgba($color: #ffffff, $alpha: 0.7)
   }
 
@@ -79,6 +80,7 @@
       font-weight: bold;
       margin-bottom: 8px;
       color: $black-color;
+      font-variant-numeric: lining-nums;
     }
 
     &__info {
@@ -88,7 +90,7 @@
       margin-bottom: 20px;
 
       span {
-        font-family: sans-serif;
+        font-variant-numeric: lining-nums;
         color: #031230;
       }
 
