@@ -94,4 +94,11 @@ textarea {
 @import './blocks/order/media-order';
 
 
+@media (max-width: 575.98px) {
+  .padding_lf_rh {
+    padding: 0 32px;
+  }
+}
+
+
 // Щоб не забути _active (comment_active ...) додавав до всіх елементів які повинні були зявитись або щоб не заважали
