@@ -3,6 +3,14 @@
   padding-bottom: 126px;
   background-color: #00091B;
 
+  &-contact {
+    width: fit-content;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    margin-left: auto;
+  }
+
   &-links {
     border: none;
   }
