@@ -10980,19 +10980,21 @@ __webpack_require__.r(__webpack_exports__);
 window.addEventListener('DOMContentLoaded', () => {
   'use strict';
 
-  let md = new mobile_detect__WEBPACK_IMPORTED_MODULE_1___default.a(window.navigator.userAgent);
-  const btnPosition = document.querySelector('.button_position');
-
-  if (md.mobile() === 'iPhone') {
-    btnPosition.classList.toggle('button_position_iPhone');
-  } else {
-    console.log('not iPhone');
-  }
-
   Object(_modules_openMenu__WEBPACK_IMPORTED_MODULE_3__["default"])('.header', '.burger', '.header-nav__list');
   Object(_modules_openQuestion__WEBPACK_IMPORTED_MODULE_4__["default"])('.question-header');
   Object(_modules_fixHeader__WEBPACK_IMPORTED_MODULE_2__["default"])('header');
   Object(_modules_tabs__WEBPACK_IMPORTED_MODULE_5__["default"])('.tabs__header', '.tabs-header__btn', '.tabs-content__item', 'tabs-header__btn_active');
+
+  try {
+    let md = new mobile_detect__WEBPACK_IMPORTED_MODULE_1___default.a(window.navigator.userAgent);
+    const btnPosition = document.querySelector('.button_position');
+
+    if (md.mobile() === 'iPhone') {
+      btnPosition.classList.toggle('button_position_iPhone');
+    } else {
+      console.log('not iPhone');
+    }
+  } catch (error) {}
 });
 
 /***/ }),
