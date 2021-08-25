@@ -10981,7 +10981,6 @@ window.addEventListener('DOMContentLoaded', () => {
   'use strict';
 
   let md = new mobile_detect__WEBPACK_IMPORTED_MODULE_1___default.a(window.navigator.userAgent);
-  console.log(md.mobile());
   const btnPosition = document.querySelector('.button_position');
 
   if (md.mobile() === 'iPhone') {

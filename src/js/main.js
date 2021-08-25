@@ -10,9 +10,6 @@ window.addEventListener('DOMContentLoaded', () => {
   'use strict';
 
   let md = new MobileDetect(window.navigator.userAgent);
-
-  console.log(md.mobile());
-
   const btnPosition = document.querySelector('.button_position');
 
   if (md.mobile() === 'iPhone') {

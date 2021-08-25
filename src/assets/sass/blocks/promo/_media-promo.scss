@@ -21,6 +21,9 @@
         margin: 0;
         border: none;
       }
+      &__phones {
+        font-size: 23px;
+      }
     }
   }
 }
@@ -28,7 +31,7 @@
 @media (max-width: 490.98px) {
   .promo {
     &__title {
-      font-size: 30px;
+      font-size: 23px;
       margin-bottom: 25px;
     }
 
@@ -40,15 +43,6 @@
 
     &_column {
       flex-direction: column;
-    }
-  }
-}
-
-@media (max-width: 380.98px) {
-  .promo {
-    &__title {
-      font-size: 25px;
-      margin-bottom: 25px;
     }
   }
 }

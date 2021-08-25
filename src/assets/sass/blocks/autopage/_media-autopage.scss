@@ -19,6 +19,13 @@
   .autopage {
     padding-top: 250px;
   }
+  .auto {
+    &-contact {
+      &__phone {
+        font-size: 23px;
+      }      
+    }
+  }
 }
 
 @media (max-width: 520.98px) {
