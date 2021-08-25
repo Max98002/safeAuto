@@ -4,6 +4,7 @@ import closeMenuAfterClick from './modules/closeMenuAfterClick';
 import fixHeader from './modules/fixHeader';
 import openMenu from './modules/openMenu';
 import openQuestion from './modules/openQuestion';
+import scrolling from './modules/scroling';
 import tabs from './modules/tabs';
 
 
@@ -17,6 +18,7 @@ window.addEventListener('DOMContentLoaded', () => {
   tabs('.tabs__header', '.tabs-header__btn', '.tabs-content__item', 'tabs-header__btn_active');
   closeMenuAfterClick('.header-nav__item > a', '.header', '.burger');
 
+  scrolling('.up');
   // try {
   //   let md = new MobileDetect(window.navigator.userAgent);
   //   const btnPosition = document.querySelector('.button_position');

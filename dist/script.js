@@ -9939,9 +9939,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_fixHeader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/fixHeader */ "./src/js/modules/fixHeader.js");
 /* harmony import */ var _modules_openMenu__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/openMenu */ "./src/js/modules/openMenu.js");
 /* harmony import */ var _modules_openQuestion__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/openQuestion */ "./src/js/modules/openQuestion.js");
-/* harmony import */ var _modules_tabs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/tabs */ "./src/js/modules/tabs.js");
+/* harmony import */ var _modules_scroling__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/scroling */ "./src/js/modules/scroling.js");
+/* harmony import */ var _modules_tabs__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/tabs */ "./src/js/modules/tabs.js");
 
  // import MobileDetect from 'mobile-detect';
+
 
 
 
@@ -9953,8 +9955,9 @@ window.addEventListener('DOMContentLoaded', () => {
   Object(_modules_openMenu__WEBPACK_IMPORTED_MODULE_3__["default"])('.header', '.burger', '.header-nav__list');
   Object(_modules_openQuestion__WEBPACK_IMPORTED_MODULE_4__["default"])('.question-header');
   Object(_modules_fixHeader__WEBPACK_IMPORTED_MODULE_2__["default"])('header');
-  Object(_modules_tabs__WEBPACK_IMPORTED_MODULE_5__["default"])('.tabs__header', '.tabs-header__btn', '.tabs-content__item', 'tabs-header__btn_active');
-  Object(_modules_closeMenuAfterClick__WEBPACK_IMPORTED_MODULE_1__["default"])('.header-nav__item > a', '.header', '.burger'); // try {
+  Object(_modules_tabs__WEBPACK_IMPORTED_MODULE_6__["default"])('.tabs__header', '.tabs-header__btn', '.tabs-content__item', 'tabs-header__btn_active');
+  Object(_modules_closeMenuAfterClick__WEBPACK_IMPORTED_MODULE_1__["default"])('.header-nav__item > a', '.header', '.burger');
+  Object(_modules_scroling__WEBPACK_IMPORTED_MODULE_5__["default"])('.up'); // try {
   //   let md = new MobileDetect(window.navigator.userAgent);
   //   const btnPosition = document.querySelector('.button_position');
   //   if (md.mobile() === 'iPhone') {
@@ -10093,6 +10096,63 @@ const openQuestion = selectorHeader => {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (openQuestion);
+
+/***/ }),
+
+/***/ "./src/js/modules/scroling.js":
+/*!************************************!*\
+  !*** ./src/js/modules/scroling.js ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+const scrolling = selectorBtn => {
+  const btnUp = document.querySelector(selectorBtn),
+        links = document.querySelectorAll("[href^='#']");
+  let speed = 0.1;
+  window.addEventListener('scroll', () => {
+    if (document.documentElement.scrollTop > 1600) {
+      try {
+        btnUp.style.opacity = '1';
+      } catch (er) {}
+    } else {
+      try {
+        btnUp.style.opacity = '0';
+      } catch (er) {}
+    }
+  });
+
+  for (let i = 0; i < links.length; i++) {
+    links[i].addEventListener('click', function (event) {
+      event.preventDefault();
+      let widthTop = Math.round(document.documentElement.scrollTop || document.body.scrollTop),
+          hash = this.hash,
+          toBlock = document.querySelector(hash).getBoundingClientRect().top,
+          start = null;
+      requestAnimationFrame(step);
+
+      function step(time) {
+        if (start === null) {
+          start = time;
+        }
+
+        let progress = time - start,
+            r = toBlock < 0 ? Math.max(widthTop - progress / speed, widthTop + toBlock) : Math.min(widthTop + progress / speed, widthTop + toBlock);
+        document.documentElement.scrollTo(0, r);
+
+        if (r != widthTop + toBlock) {
+          requestAnimationFrame(step);
+        } else {
+          location.hash = hash;
+        }
+      }
+    });
+  }
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (scrolling);
 
 /***/ }),
 
