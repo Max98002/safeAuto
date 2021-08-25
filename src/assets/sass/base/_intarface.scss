@@ -5,16 +5,13 @@
   &_position {
     position: fixed;
     display: none;
-    top: calc(100vh - 59px);
+    bottom: 0;
     left: 0;
     right: 0;
     width: 100%;
     background-color: $accent-color;
-    z-index: 99999;
+    z-index: 20;
     padding: 20px 32px;
-    &_iPhone {
-      top: calc(100vh - (68px + 10px));
-    }
   }
 }
 
