@@ -1,4 +1,5 @@
 import 'bootstrap';
+import closeMenuAfterClick from './modules/closeMenuAfterClick';
 // import MobileDetect from 'mobile-detect';
 import fixHeader from './modules/fixHeader';
 import openMenu from './modules/openMenu';
@@ -14,6 +15,7 @@ window.addEventListener('DOMContentLoaded', () => {
   fixHeader('header');
 
   tabs('.tabs__header', '.tabs-header__btn', '.tabs-content__item', 'tabs-header__btn_active');
+  closeMenuAfterClick('.header-nav__item > a', '.header', '.burger');
 
   // try {
   //   let md = new MobileDetect(window.navigator.userAgent);

@@ -9935,10 +9935,12 @@ module.exports = g;
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.esm.js");
-/* harmony import */ var _modules_fixHeader__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/fixHeader */ "./src/js/modules/fixHeader.js");
-/* harmony import */ var _modules_openMenu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/openMenu */ "./src/js/modules/openMenu.js");
-/* harmony import */ var _modules_openQuestion__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/openQuestion */ "./src/js/modules/openQuestion.js");
-/* harmony import */ var _modules_tabs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/tabs */ "./src/js/modules/tabs.js");
+/* harmony import */ var _modules_closeMenuAfterClick__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/closeMenuAfterClick */ "./src/js/modules/closeMenuAfterClick.js");
+/* harmony import */ var _modules_fixHeader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/fixHeader */ "./src/js/modules/fixHeader.js");
+/* harmony import */ var _modules_openMenu__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/openMenu */ "./src/js/modules/openMenu.js");
+/* harmony import */ var _modules_openQuestion__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/openQuestion */ "./src/js/modules/openQuestion.js");
+/* harmony import */ var _modules_tabs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/tabs */ "./src/js/modules/tabs.js");
+
  // import MobileDetect from 'mobile-detect';
 
 
@@ -9948,10 +9950,11 @@ __webpack_require__.r(__webpack_exports__);
 window.addEventListener('DOMContentLoaded', () => {
   'use strict';
 
-  Object(_modules_openMenu__WEBPACK_IMPORTED_MODULE_2__["default"])('.header', '.burger', '.header-nav__list');
-  Object(_modules_openQuestion__WEBPACK_IMPORTED_MODULE_3__["default"])('.question-header');
-  Object(_modules_fixHeader__WEBPACK_IMPORTED_MODULE_1__["default"])('header');
-  Object(_modules_tabs__WEBPACK_IMPORTED_MODULE_4__["default"])('.tabs__header', '.tabs-header__btn', '.tabs-content__item', 'tabs-header__btn_active'); // try {
+  Object(_modules_openMenu__WEBPACK_IMPORTED_MODULE_3__["default"])('.header', '.burger', '.header-nav__list');
+  Object(_modules_openQuestion__WEBPACK_IMPORTED_MODULE_4__["default"])('.question-header');
+  Object(_modules_fixHeader__WEBPACK_IMPORTED_MODULE_2__["default"])('header');
+  Object(_modules_tabs__WEBPACK_IMPORTED_MODULE_5__["default"])('.tabs__header', '.tabs-header__btn', '.tabs-content__item', 'tabs-header__btn_active');
+  Object(_modules_closeMenuAfterClick__WEBPACK_IMPORTED_MODULE_1__["default"])('.header-nav__item > a', '.header', '.burger'); // try {
   //   let md = new MobileDetect(window.navigator.userAgent);
   //   const btnPosition = document.querySelector('.button_position');
   //   if (md.mobile() === 'iPhone') {
@@ -9962,6 +9965,33 @@ window.addEventListener('DOMContentLoaded', () => {
   // } catch (error) {
   // }
 });
+
+/***/ }),
+
+/***/ "./src/js/modules/closeMenuAfterClick.js":
+/*!***********************************************!*\
+  !*** ./src/js/modules/closeMenuAfterClick.js ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+const closeMenuAfterClick = (triggersItem, triggerMenu, triggerBtn) => {
+  const items = document.querySelectorAll(triggersItem),
+        menu = document.querySelector(triggerMenu),
+        btn = document.querySelector(triggerBtn);
+  items.forEach(item => {
+    item.addEventListener('click', function (e) {
+      try {
+        menu.classList.remove('header_active');
+        btn.classList.remove('burger_active');
+      } catch (er) {}
+    });
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (closeMenuAfterClick);
 
 /***/ }),
 
@@ -9980,10 +10010,13 @@ const fixHeader = selectorHeader => {
   const changeHeaderScroll = element => {
     if (document.documentElement.scrollTop > 50 && element.classList.contains('header__settings')) {
       element.style.cssText = `position: fixed; background: #fff;`;
+      document.querySelector('.burger').style.cssText = `position: fixed`;
     } else if (document.documentElement.scrollTop > 50 && !element.classList.contains('header__settings')) {
       element.style.cssText = `position: fixed; background: #031230;`;
+      document.querySelector('.burger').style.cssText = `position: fixed`;
     } else {
       header.style.cssText = `position: absolute; background-color: auto;`;
+      document.querySelector('.burger').style.cssText = `position: absolute`;
     }
   };
 
@@ -10009,7 +10042,8 @@ const openMenu = (selectorMenu, selectorBtn, selectorListItem) => {
   const btn = document.querySelector(selectorBtn),
         menu = document.querySelector(selectorMenu),
         listItem = document.querySelector(selectorListItem);
-  btn.addEventListener('click', () => {
+  btn.addEventListener('click', function () {
+    this.classList.toggle('burger_active');
     menu.classList.toggle('header_active');
     listItem.classList.toggle('header-nav__list_active');
 
