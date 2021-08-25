@@ -18,12 +18,15 @@
 
     &-contact {
       &__social {
-        margin: 0;
+        margin: 20px 0;
         border: none;
       }
       &__phones {
         font-size: 23px;
       }
+    }
+    &_column {
+      flex-direction: column;
     }
   }
 }
@@ -32,17 +35,6 @@
   .promo {
     &__title {
       font-size: 23px;
-      margin-bottom: 25px;
-    }
-
-    &-contact {
-      &__social {
-        margin: 20px 0;
-      }
-    }
-
-    &_column {
-      flex-direction: column;
     }
   }
 }

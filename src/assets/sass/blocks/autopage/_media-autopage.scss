@@ -5,9 +5,11 @@
         font-size: 14px;
         padding: 15px;
       }
+
       &__phone {
         font-size: 14px;
       }
+
       svg {
         display: none;
       }
@@ -19,11 +21,12 @@
   .autopage {
     padding-top: 250px;
   }
+
   .auto {
     &-contact {
       &__phone {
         font-size: 23px;
-      }      
+      }
     }
   }
 }
@@ -31,5 +34,23 @@
 @media (max-width: 520.98px) {
   .autopage {
     padding-top: 100px;
+  }
+
+  .auto {
+    &-desc {
+      &__btns {
+        position: fixed;
+        display: flex;
+        flex-flow: row nowrap;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 20;
+        .auto-contact__btn {
+          width: 50%;
+          margin: 0;
+        }
+      }
+    }
   }
 }
