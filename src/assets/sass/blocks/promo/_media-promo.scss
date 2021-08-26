@@ -18,8 +18,12 @@
 
     &-contact {
       &__social {
-        margin: 20px 0;
+        order: 1;
+        margin: 0 0 20px 0;
         border: none;
+      }
+      &__phone {
+        margin-bottom: 20px;
       }
       &__phones {
         font-size: 23px;
