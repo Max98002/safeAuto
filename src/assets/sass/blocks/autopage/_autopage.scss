@@ -141,6 +141,10 @@
 .auto {
   &-desc {
     font-variant-numeric: lining-nums;
+    &__btns {
+      display: flex;
+      flex-flow: row nowrap;
+    }
   }
   &__name {
     font-weight: bold;
